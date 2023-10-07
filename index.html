@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <title>Harcama Hesaplayici</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">Harcama Hesaplayici</h1>
+
+    <div class="container">
+      <!-- karsilama metni -->
+      <h3 class="greet">
+        <span> Hosgeldiniz,</span>
+        <input id="user-inp" type="text" placeholder="isminizi giriniz" />
+      </h3>
+
+      <!-- form alani -->
+      <form>
+        <!-- form ust kisim -->
+        <div class="double">
+          <div class="form-field">
+            <label>Harcama</label>
+            <input id="title-inp" type="text" />
+          </div>
+          <div class="form-field">
+            <label>Fiyat</label>
+            <input id="price-inp" type="number" />
+          </div>
+        </div>
+
+        <!-- form alt kisim -->
+        <div class="double">
+          <div class="form-check-field">
+            <input type="checkbox" id="checked" />
+            <label for="checked">Odendi</label>
+          </div>
+
+          <button id="add-btn">Ekle</button>
+        </div>
+      </form>
+
+      <!-- toplama alani -->
+      <div class="sum">
+        Toplama Harcama <span id="price-info">0</span> &#8378;
+      </div>
+
+      <!-- filtreleme alani -->
+      <select>
+        <option value="all">Hepsi</option>
+        <option value="paid">Odenenler</option>
+        <option value="not-paid">Odenmeyenler</option>
+      </select>
+
+      <!-- harcama listesi -->
+      <div id="list"></div>
+    </div>
+
+    <!-- js baglanti-->
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
